@@ -5,6 +5,9 @@ learn rust
 ## Links
 
 - [Rust Programming Language](https://www.rust-lang.org/)
+  - [Learn Rust - Rust Programming Language](https://www.rust-lang.org/learn)
+  - [The Rust Programming Language - The Rust Programming Language](https://doc.rust-lang.org/book/)
+  - [Introduction - Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/)
 - [rustup.rs - The Rust toolchain installer](https://rustup.rs/)
 - [Docs.rs](https://docs.rs/)
   - [clap - Rust](https://docs.rs/clap/)
@@ -14,6 +17,7 @@ learn rust
     - [rust-lang/rust: Empowering everyone to build reliable and efficient software.](https://github.com/rust-lang/rust)
     - [rust-lang/rust-clippy: A bunch of lints to catch common mistakes and improve your Rust code](https://github.com/rust-lang/rust-clippy)
     - [rust-lang/cargo: The Rust package manager](https://github.com/rust-lang/cargo)
+    - [rust-lang/rustlings: Small exercises to get you used to reading and writing Rust code!](https://github.com/rust-lang/rustlings/)
     - [rust-lang/rls: Repository for the Rust Language Server (aka RLS)](https://github.com/rust-lang/rls)
     - [rust-lang/rls-vscode: RLS-based plugin for VSCode](https://github.com/rust-lang/rls-vscode)
 - [Rust (rls) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust)
