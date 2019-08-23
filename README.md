@@ -29,6 +29,8 @@ learn rust
 
 > Community Edition is open-source, licensed under Apache 2.0. Projects like Android and Swift use Apache 2.0, so you're in good company. It can also be used for commercial development.
 
+- [Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/)
+
 - [FAQ - IntelliJ Open-Source Project - Confluence](https://www.jetbrains.org/display/IJOS/FAQ)
 
 > We chose the Apache 2.0 license because it is a very open license which lets anyone create both open source and commercial products on top of our platform. 
