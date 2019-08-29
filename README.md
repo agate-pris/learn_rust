@@ -20,6 +20,7 @@ learn rust
     - [rust-lang/rustlings: Small exercises to get you used to reading and writing Rust code!](https://github.com/rust-lang/rustlings/)
     - [rust-lang/rls: Repository for the Rust Language Server (aka RLS)](https://github.com/rust-lang/rls)
     - [rust-lang/rls-vscode: RLS-based plugin for VSCode](https://github.com/rust-lang/rls-vscode)
+  - [rust-lang-nursery](https://github.com/rust-lang-nursery)
 - [Rust (rls) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust)
 - [Home | Rustの日本語ドキュメント/Japanese Docs for Rust](https://doc.rust-jp.rs/)
   - [まえがき - The Rust Programming Language](https://doc.rust-jp.rs/book/second-edition/)
