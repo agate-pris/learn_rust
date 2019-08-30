@@ -1,38 +1,46 @@
 extern crate rand;
 
-//use rand::prelude::*;
-use rand::Rng;
+use rand::prelude::*;
 
 fn main() {
     println!("Guess the number!");
     let gen = || rand::thread_rng().gen_range(1, 10);
-    loop {
-        let mine = gen();
-        println!("mine: {}", mine);
-        println!("Expect whether yours is higher or lower than mine.");
-        let mut s = String::new();
-        let size = std::io::stdin().read_line(&mut s).expect("死");
-        let yours = gen();
-        println!("yours: {}", yours);
-        match ("higher".starts_with(s.trim()), "lower".starts_with(s.trim()), yours > mine, yours < mine) {
-            (true, false, true, false) | (false, true, false, true) => {
-                println!("You win!");
-                return;
-            },
-            (true, false, false, true) | (false, true, true, false) => {
-                println!("You lose.");
-                return;
-            },
-            (true, false, false, false) | (false, true, false, false) => {
-                println!("Draw");
+    let mine = gen();
+    println!("mine: {}", mine);
+    let high = {
+        let high;
+        loop {
+            println!("Expect whether yours is higher or lower than mine.");
+            let input = {
+                let s = {
+                    let mut s = String::new();
+                    std::io::stdin().read_line(&mut s).ok();
+                    s
+                };
+                let t = s.trim();
+                ("higher".starts_with(t), "lower".starts_with(t))
+            };
+            assert_ne!(input, (true, true));
+            if input == (false, false) {
+                println!("Invalid input.");
+            } else {
+                high = input.0;
+                break;
             }
-            (false, false, ..) => {
-                println!("Invalid input {}.", s);
-            },
-            (true, true, ..) | (.., true, true) => {
-                // bug
-            }
-            _ => {},
+        }
+        high
+    };
+    let yours = gen();
+    println!("yours: {}", yours);
+    match (high, yours.cmp(&mine)) {
+        (.., std::cmp::Ordering::Equal) => {
+            println!("Draw");
+        }
+        (true, std::cmp::Ordering::Greater) | (false, std::cmp::Ordering::Less) => {
+            println!("You win!");
+        }
+        (true, std::cmp::Ordering::Less) | (false, std::cmp::Ordering::Greater) => {
+            println!("You lose.");
         }
     }
 }
